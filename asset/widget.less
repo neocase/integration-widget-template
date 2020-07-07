@@ -24,3 +24,196 @@
     text-align: center;
     width: 100%;
 }
+//Cases
+.content {
+    padding:25px;
+        .intro {
+            h2 {
+                margin-bottom: 7px;
+            }
+        }
+        .bloc {
+            float: left;
+            border-bottom: 1px solid #EDEDED;
+            width: 100%;
+            padding:25px 0;
+                h2 {
+                    width: 85%;
+                    float: left;    
+                }
+            .count{
+                float: left;
+                width: 15%;
+                border-radius: 4px;
+                padding: 5px 10px;
+                text-align: right;
+                font-weight: bold;
+                cursor: pointer;
+                a {
+                    font-weight: bold;
+                    font-size: 18px;
+                    padding: 5px 10px;
+                }
+            }
+            .count-taches {
+                background-color: #F28907;
+                color: #000; 
+            }
+                .count-taches:hover {
+                    background-color: #F5A139;
+                }
+            .count-encours {
+                background-color: #EDEDED;
+                color: #000;
+            }
+                .count-encours:hover {
+                    background-color: #ADADAD;
+                } 
+            .count-cloturees {
+                background-color: #EDEDED;
+                color: #ADADAD;
+            }
+        }
+        .bloc-cloturees h2 {
+            color: #ADADAD;
+        }
+        .btn-container {
+            float: left;
+            width: 100%;
+            text-align: center;
+        .btn {
+            color: #fff;
+            background-color: #333333;
+            padding: 10px 25px;
+            display: block;
+            max-width: 210px;
+            margin: 30px auto 0 auto;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #000;
+        }   
+    } 
+}
+
+//KB
+.search {
+    background-color: #EDEDED;
+    min-height:100px;
+    text-align: center;
+    padding: 42px;
+    background-image: url("./search-img.png");
+    background-repeat: no-repeat;
+    background-size: auto 130px;
+        .search-field {
+            position: relative;
+            input{
+                width: 100%;
+                border-radius: 25px;
+                border: 1px solid #EDEDED;
+                padding:  10px 15px;
+                color: #ADADAD;
+                font-style: italic;
+            }
+            .btn-search {
+                position: absolute;
+                background-image: url("./ico-search.png");
+                background-repeat: no-repeat;
+                width: 40px;
+                height: 40px;
+                right: 0;
+                top: 11px;
+            }
+        }
+}
+.content-kb {
+    padding: 15px 25px 25px;
+    .small-title {
+        border-bottom: 1px solid #EDEDED;
+        margin-bottom: 15px;
+        padding-bottom: 15px;  
+    }
+
+    .article {
+        border-bottom: 1px solid #EDEDED;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        display: block;
+        box-sizing: border-box;
+            .tag {
+                border-radius: 25px;
+                padding: 5px 25px;
+                text-transform: uppercase;
+                font-size: 11px !important;
+                margin-bottom: 7px;
+            }
+            .tag-01 {
+                color: #FF9966 !important;
+                background-color:#FFEBE0;
+            }
+            .tag-02 {
+                color: #330099 !important;
+                background-color: #D6CCEB;
+            }
+            .summary {
+                margin-bottom: 7px;
+                color: #333;
+            }
+            .date {
+                color: #ADADAD;
+                font-size: 11px !important;
+            }
+    }
+    .article:hover {
+        border-bottom: 4px solid #333;
+    }
+}
+
+//EDM
+.doc-container {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #EDEDED;
+    padding: 20px 0;
+    .ico {
+        width: 15%;
+        min-width: 25px;
+        height: 30px;
+        float: left;
+        background-size: 25px 30px;
+    }
+    .ico-pdf {
+        background-image: url("./ico_pdf.png");
+        background-repeat: no-repeat;
+    }
+    .ico-png {
+        background-image: url("./ico_png.png");
+        background-repeat: no-repeat;
+    }
+    .doc {
+        width: 85%;
+        float: left;
+    }
+    .date {
+        width: 100%;
+        float: left;
+        color: #ADADAD;
+        font-size: 11px !important;
+    }
+}
+.doc-container:hover {
+    border-bottom: 4px solid #000;
+}
+
+.content-edm {
+    .btn-container {
+        .btn {
+            float: left;
+            max-width: 50%;
+            width: 50%;
+            padding: 10px 5px;
+            border: 2px solid #fff;
+        }
+    }
+}
+   

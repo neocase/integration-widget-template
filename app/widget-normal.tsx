@@ -147,18 +147,45 @@ export class NormalWidget extends React.Component<NormalWidgetProps, NormalWidge
     public render() {
         return (
             <div className="widget-template">
-                <Search isVisible={this.props.isSearchVisible} handleChangeSearch={(textToSearch, status) => this.handleChangeSearch(textToSearch, status)} status={this.getAllAvailableStatus()} />
-                <Scrollbars autoHeight autoHeightMin={this.props.isSearchVisible ? 445 : 495}>
-                    <List showPicture={true} showDetail={true} values={this.formattedDataForList()}/>
-                    {/* <PieCharts 
-                        data={this.formattedDataForPieChart()} 
-                        title="Pie Charts expenses" 
-                        period="24/03/2019 - 20/02/2020" 
-                        tooltip="My expenses"    
-                    /> */}
-                    {/* <div className="partner-title">{"Partner Title"}</div>
-                    <Table columns={this.formattedColumnsForTable()} values={this.formattedDataForTable()} /> */}
-                </Scrollbars>
+                <div className="content content-edm">
+                    <div className="doc-container doc-01"> 
+                        <div className="ico ico-pdf"></div>
+                        <div className="doc">
+                            <h2 className="doc-name">AL-Passeport.pdf</h2>
+                            <div className="date">Créé le 11/09/2019 9:40 </div>
+                        </div>
+                    </div>
+
+                    <div className="doc-container doc-02"> 
+                        <div className="ico ico-pdf"></div>
+                        <div className="doc">
+                            <h2 className="doc-name">AL-Permis de conduire.pdf</h2>
+                            <div className="date">Créé le 11/09/2019 9:40 </div>
+                        </div>
+                    </div>
+
+                    <div className="doc-container doc-03"> 
+                        <div className="ico ico-png"></div>
+                        <div className="doc">
+                            <h2 className="doc-name">AL-Photo identité.png</h2>
+                            <div className="date">Créé le 11/09/2019 9:40 </div>
+                        </div>
+                    </div>
+
+                    <div className="doc-container doc-04"> 
+                        <div className="ico ico-pdf"></div>
+                        <div className="doc">
+                            <h2 className="doc-name">AL-RIB.pdf</h2>
+                            <div className="date">Créé le 11/09/2019 9:40 </div>
+                        </div>
+                    </div>
+
+                <div className="btn-container">
+                    <div className="btn btn-generer"><a href="https://uat-hrrportalstd.neocasedemo.com/Default.aspx?pageId=1359">Générer document</a></div>
+                    <div className="btn btn-transmettre"><a href="">Transmettre document</a></div>
+                </div>
+
+                </div>
             </div>
         );      
     }
