@@ -7,7 +7,7 @@
   "author": "Simon Bergot <sbergot@talentsoft.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p && ts-node ./build_manifest.ts",
+    "build": "webpack -p && ts-node ./build_metadatafiles.ts",
     "build:debug": "webpack -d",
     "build:doc": "node ./copy_doc.js",
     "display": "node ./display.js",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@talentsoft-opensource/hylia": "4.0.1",
-    "@talentsoft-opensource/integration-dll": "4.0.2",
+    "@talentsoft-opensource/integration-dll": "4.6.1",
     "@types/enzyme": "^3.9.1",
     "@types/jest": "^24.0.11",
     "@types/react": "^16.4.16",
@@ -49,8 +49,8 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "@talentsoft-opensource/integration-widget-contract": "4.0.2",
-    "@talentsoft-opensource/widget-display-tool": "4.0.2",
+    "@talentsoft-opensource/integration-widget-contract": "4.6.1",
+    "@talentsoft-opensource/widget-display-tool": "4.6.1",
     "@types/highcharts": "^5.0.31",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
