@@ -22,33 +22,33 @@ describe('Widget Table', () => {
     it('Table has the good amount of columns', () => {
         const wrapper = shallow(<Table columns={mockedColumns} values={mockedLine} />);
         
-        expect(wrapper.find('.table-template-columns').length).toBe(1);
-        expect(wrapper.find('.table-template-columns').find('tr').find('th').length).toBe(4);
+        expect(wrapper.find('.table-columns').length).toBe(1);
+        expect(wrapper.find('.table-columns').find('li').length).toBe(4);
     });
 
     it('Table has the good amount of line', () => {
         const wrapper = shallow(<Table columns={mockedColumns} values={mockedLine} />);
         
         expect(wrapper.find('.table-line').length).toBe(1);
-        expect(wrapper.find('.table-line').find('tr').find('td').length).toBe(4);
+        expect(wrapper.find('.table-line').find('li').length).toBe(4);
     });
 
     it('Check Tag type has the good css class', () => {
         const wrapper = shallow(<Table columns={mockedColumns} values={mockedLine} />);
         
-        expect(wrapper.find('.table-line').find('tr').find('td').find('span').hasClass('Hylia-a-tag Hylia-a-tag--apprentice')).toBe(true);
+        expect(wrapper.find('.table-line').find('li').find('span').hasClass('Hylia-a-tag Hylia-a-tag--apprentice')).toBe(true);
     });
 
     it('Check Date type has the good css class', () => {
         const wrapper = shallow(<Table columns={mockedColumns} values={mockedLine} />);
         
-        expect(wrapper.find('.table-line').find('tr').find('td').at(2).hasClass('dates')).toBe(true);
+        expect(wrapper.find('.table-line').find('li').at(2).hasClass('dates')).toBe(true);
     });
 
     it('Check Text type has the good css class', () => {
         const wrapper = shallow(<Table columns={mockedColumns} values={mockedLine} />);
         
-        expect(wrapper.find('.table-line').find('tr').find('td').at(1).hasClass('text')).toBe(true);
+        expect(wrapper.find('.table-line').find('li').at(1).hasClass('text')).toBe(true);
     });
 
     it('Check active Status type has the good css class', () => {

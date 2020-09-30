@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const displayTool = require('@talentsoft-opensource/widget-display-tool');
 const logging = require('./logging');
 const webpackConfiguration = require('./webpack.config');
-const widgetName = require('./widget.conf.json').widgetName;
+const widgetName = require('./widget.conf.json').Name;
 const opn = require('opn');
 
 

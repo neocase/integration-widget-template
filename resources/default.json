@@ -1,0 +1,11 @@
+{
+    "labels": {
+        "partner-title": "My expenses",
+        "partner-serie-tocomplete": "To  complete ",
+        "partner-serie-invalidation": "In validation",
+        "partner-serie-tovalidate": "To validate by myself",
+        "partner-serie-validated": "Validated",
+        "partner-tooltip": "There are <b>{point.y}</b> expenses with status <b>'{point.name}'</b> for an amount of <b>{point.z}$</b>",
+        "partner-from-to": "from {start} to {end} webhook test"
+    }
+}

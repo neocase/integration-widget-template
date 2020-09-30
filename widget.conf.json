@@ -1,4 +1,4 @@
 {
-    "widgetName" : "template",
-    "widgetScope" : "Me"
+    "Name" : "mywidget",
+    "Scopes" : "me,myteam"
 }

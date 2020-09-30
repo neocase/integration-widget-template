@@ -143,4 +143,22 @@ This method must be called when the widget is ready to be displayed to the user.
 **Returns:** `void`
 
 ___
+<a id="getPreloadedResources"></a>
+
+###  getPreloadedResources
+
+**● getPreloadedResources**: *`function`*
+
+*Defined in widget-contract-myts.ts:79*
+
+This method allows to retrieve customized resources by the client if he has done so, or resources given by the partner if not.
+The client can customize labels. His customizations will only be available to him. 
+If the language used is not available among the given resources, the default resources are taken from "default.json".
+
+#### Type declaration
+▸(): `void`
+
+**Returns:** `Promise`<Record<string, string>>
+
+___
 

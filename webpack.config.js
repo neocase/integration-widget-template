@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const widgetName = require('./widget.conf.json').widgetName;
+const widgetName = require('./widget.conf.json').Name;
 
 module.exports =
     {

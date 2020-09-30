@@ -158,6 +158,7 @@ export class NormalWidget extends React.Component<NormalWidgetProps, NormalWidge
                     /> */}
                     {/* <div className="partner-title">{"Partner Title"}</div>
                     <Table columns={this.formattedColumnsForTable()} values={this.formattedDataForTable()} /> */}
+                    <div className="partner-title">{this.props.widgetProps.myTSHostService.getPreloadedResources()['partner-title']}</div>
                 </Scrollbars>
             </div>
         );      

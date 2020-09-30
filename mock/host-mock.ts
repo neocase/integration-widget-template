@@ -1,10 +1,12 @@
 /**
  * This file contains the callbacks that you can modify to test the display of your widget
  */
-import { HostMock } from '@talentsoft-opensource/widget-display-tool/src/host/mock-definitions'
-import { HttpResponse, RequestOptions, HeaderActionConfiguration } from '@talentsoft-opensource/integration-widget-contract'
-import { AppHeaderActionConfiguration } from '@talentsoft-opensource/integration-widget-component';
+import { HostMock } from '@talentsoft-opensource/widget-display-tool/src/contracts/host-mock-contract'
+import { HttpResponse, RequestOptions } from '@talentsoft-opensource/integration-widget-contract'
 import { Status } from '../app/components/Search/Status';
+import * as en from '../resources/en-gb.json';
+import * as fr from '../resources/fr-fr.json';
+import * as def from '../resources/default.json';
 
 export const hostmock: HostMock = {
     /**
@@ -13,6 +15,14 @@ export const hostmock: HostMock = {
      * - proxyMode: false => calls the mocked version defined in this file
      */
     proxyMode: false,
+
+    /**
+     * This setting controls the type of security headers
+     * used to authenticate a request:
+     * - securityMode: directconnect => (deprecated) adds the login and a token with the direct connect format
+     * - securityMode: jwtsharedsecret => adds a token in the jwt format
+     */
+    securityMode: "jwtsharedsecret",
 
     /**
      * If proxyMode == true, when a direct connect request is made this secretkey will be used.
@@ -24,6 +34,19 @@ export const hostmock: HostMock = {
      * If proxyMode == true, when a direct connect request is made this login will be used
      */
     login: "mylogin",
+
+    getPreloadedResources: (language: string) => {
+        switch (language) {
+            case 'en-gb':
+                return en['labels'];
+                break;
+            case 'fr-fr':
+                return fr['labels'];
+                break;
+            default:
+                return def['labels'];
+        }
+    },
 
     /**
      * If proxyMode == false, this method is called instead of sending a request
@@ -104,10 +127,10 @@ export const hostmock: HostMock = {
      * In production, those properties are defined for each 
      * client but you may provide default values.
      */
-    configuration: {
+    configuration: {  
         domain:"https://www.exemple.com",
+        apikey:"AZERTY",      
     },
-
     /**
      * This function is called to generate the autoconnect url when using
      * openUrlinNewTab or openUrlinCurrentTab

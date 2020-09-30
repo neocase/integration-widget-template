@@ -2,6 +2,7 @@ import *  as React from "react";
 import { WidgetProps } from "@talentsoft-opensource/integration-widget-contract"
 import { EnlargedWidget } from "./widget-enlarged";
 import { NormalWidget } from "./widget-normal";
+import { languagePacks, getLanguage, recordIsEmpty } from './Resources';
 
 interface WidgetState {
     isSearchVisible: boolean;
@@ -26,7 +27,7 @@ export class Widget extends React.Component<WidgetProps, WidgetState> {
             } });
     }
 
-
+    
     public render() {
         let widget;
 
